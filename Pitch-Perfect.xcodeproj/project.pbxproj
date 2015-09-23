@@ -13,6 +13,9 @@
 		936A51191BB17F6300E57C8A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 936A51181BB17F6300E57C8A /* Images.xcassets */; };
 		936A511C1BB17F6300E57C8A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 936A511A1BB17F6300E57C8A /* LaunchScreen.xib */; };
 		936A51281BB17F6300E57C8A /* Pitch_PerfectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936A51271BB17F6300E57C8A /* Pitch_PerfectTests.swift */; };
+		936A51331BB2605700E57C8A /* microphone-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 936A51311BB2605700E57C8A /* microphone-iphone.png */; };
+		936A51341BB2605700E57C8A /* microphone@2x-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 936A51321BB2605700E57C8A /* microphone@2x-iphone.png */; };
+		937AE9AC1BB306ED00E318D4 /* stop-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 937AE9AB1BB306ED00E318D4 /* stop-iphone.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		936A51211BB17F6300E57C8A /* Pitch-PerfectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pitch-PerfectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		936A51261BB17F6300E57C8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		936A51271BB17F6300E57C8A /* Pitch_PerfectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pitch_PerfectTests.swift; sourceTree = "<group>"; };
+		936A51311BB2605700E57C8A /* microphone-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "microphone-iphone.png"; path = "../microphone-iphone.png"; sourceTree = "<group>"; };
+		936A51321BB2605700E57C8A /* microphone@2x-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "microphone@2x-iphone.png"; path = "../microphone@2x-iphone.png"; sourceTree = "<group>"; };
+		937AE9AB1BB306ED00E318D4 /* stop-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stop-iphone.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +96,10 @@
 		936A510F1BB17F6300E57C8A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				936A51311BB2605700E57C8A /* microphone-iphone.png */,
 				936A51101BB17F6300E57C8A /* Info.plist */,
+				936A51321BB2605700E57C8A /* microphone@2x-iphone.png */,
+				937AE9AB1BB306ED00E318D4 /* stop-iphone.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -192,6 +201,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				937AE9AC1BB306ED00E318D4 /* stop-iphone.png in Resources */,
+				936A51331BB2605700E57C8A /* microphone-iphone.png in Resources */,
+				936A51341BB2605700E57C8A /* microphone@2x-iphone.png in Resources */,
 				936A51171BB17F6300E57C8A /* Main.storyboard in Resources */,
 				936A511C1BB17F6300E57C8A /* LaunchScreen.xib in Resources */,
 				936A51191BB17F6300E57C8A /* Images.xcassets in Resources */,
@@ -407,6 +419,7 @@
 				936A512D1BB17F6300E57C8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		936A512E1BB17F6300E57C8A /* Build configuration list for PBXNativeTarget "Pitch-PerfectTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +428,7 @@
 				936A51301BB17F6300E57C8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
