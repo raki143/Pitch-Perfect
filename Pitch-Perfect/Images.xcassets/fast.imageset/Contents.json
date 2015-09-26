@@ -2,13 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "stop-iphone.png"
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "stop@2x-iphone.png"
+      "filename" : "fast@2x-iphone.png"
     },
     {
       "idiom" : "universal",
