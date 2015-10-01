@@ -22,6 +22,8 @@
 		93DD7E1E1BB6DD0700DAD052 /* stop@2x-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 93DD7E1D1BB6DD0700DAD052 /* stop@2x-iphone.png */; };
 		93DD7E201BB6DD1400DAD052 /* fast@2x-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 93DD7E1F1BB6DD1400DAD052 /* fast@2x-iphone.png */; };
 		93DE53441BB9C8A90071E52D /* RecordedAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DE53431BB9C8A90071E52D /* RecordedAudio.swift */; };
+		93F777671BBDC64B007601DC /* darthvader@2x-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 93F777661BBDC64B007601DC /* darthvader@2x-iphone.png */; settings = {ASSET_TAGS = (); }; };
+		93F777691BBDC656007601DC /* chipmunk@2x-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 93F777681BBDC656007601DC /* chipmunk@2x-iphone.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		93DD7E1D1BB6DD0700DAD052 /* stop@2x-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stop@2x-iphone.png"; sourceTree = "<group>"; };
 		93DD7E1F1BB6DD1400DAD052 /* fast@2x-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fast@2x-iphone.png"; sourceTree = "<group>"; };
 		93DE53431BB9C8A90071E52D /* RecordedAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordedAudio.swift; sourceTree = "<group>"; };
+		93F777661BBDC64B007601DC /* darthvader@2x-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "darthvader@2x-iphone.png"; sourceTree = "<group>"; };
+		93F777681BBDC656007601DC /* chipmunk@2x-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chipmunk@2x-iphone.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,8 @@
 				93DD7E1D1BB6DD0700DAD052 /* stop@2x-iphone.png */,
 				93DD7E191BB675FD00DAD052 /* slow@2x-iphone.png */,
 				93DD7E1F1BB6DD1400DAD052 /* fast@2x-iphone.png */,
+				93F777661BBDC64B007601DC /* darthvader@2x-iphone.png */,
+				93F777681BBDC656007601DC /* chipmunk@2x-iphone.png */,
 				93DD7E1B1BB67B8A00DAD052 /* movie_quote.mp3 */,
 			);
 			name = "Supporting Files";
@@ -225,7 +231,9 @@
 				93DD7E1A1BB675FD00DAD052 /* slow@2x-iphone.png in Resources */,
 				93DD7E1E1BB6DD0700DAD052 /* stop@2x-iphone.png in Resources */,
 				93DD7E1C1BB67B8A00DAD052 /* movie_quote.mp3 in Resources */,
+				93F777671BBDC64B007601DC /* darthvader@2x-iphone.png in Resources */,
 				936A51331BB2605700E57C8A /* microphone-iphone.png in Resources */,
+				93F777691BBDC656007601DC /* chipmunk@2x-iphone.png in Resources */,
 				93DD7E201BB6DD1400DAD052 /* fast@2x-iphone.png in Resources */,
 				936A51341BB2605700E57C8A /* microphone@2x-iphone.png in Resources */,
 				936A51171BB17F6300E57C8A /* Main.storyboard in Resources */,
