@@ -30,16 +30,16 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
     
-        stopButton.hidden = true
-        recordButton.enabled = true
+        stopButton.isHidden = true
+        recordButton.isEnabled = true
     }
 
-    @IBAction func recordAudio(sender: UIButton) {
-        recordButton.enabled = false
-        recordingInProgress.hidden = false
-        stopButton.hidden = false
+    @IBAction func recordAudio(_ sender: UIButton) {
+        recordButton.isEnabled = false
+        recordingInProgress.isHidden = false
+        stopButton.isHidden = false
         
         //  create filepath i.e .wav file where audio is stored
         
@@ -49,18 +49,18 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     //    let pathArray = [dirPath, recordingName]
     //    let filePath = NSURL.fileURLWithPathComponents(pathArray)
       
-        let documentsDirectory = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
-        let filePath = documentsDirectory.URLByAppendingPathComponent(recordingName)
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        let filePath = documentsDirectory.appendingPathComponent(recordingName)
         
         print(filePath)
         
         // settings for AVAudioPlayer. you can give empty dictionary if you do not need to give any sttings.
         let recordSettings:[String : AnyObject] = [
             
-            AVEncoderAudioQualityKey : AVAudioQuality.Max.rawValue,
-            AVEncoderBitRateKey : 320000,
-            AVNumberOfChannelsKey: 2,
-            AVSampleRateKey : 44100.0
+            AVEncoderAudioQualityKey : AVAudioQuality.max.rawValue as AnyObject,
+            AVEncoderBitRateKey : 320000 as AnyObject,
+            AVNumberOfChannelsKey: 2 as AnyObject,
+            AVSampleRateKey : 44100.0 as AnyObject
         ]
         
         // setup audio session
@@ -69,10 +69,10 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             try session.setCategory(AVAudioSessionCategoryPlayAndRecord)
             
                 print(filePath)
-                audioRecorder = try AVAudioRecorder(URL: filePath, settings: recordSettings)
+                audioRecorder = try AVAudioRecorder(url: filePath, settings: recordSettings)
             
             audioRecorder.delegate = self
-            audioRecorder.meteringEnabled = true
+            audioRecorder.isMeteringEnabled = true
             audioRecorder.prepareToRecord()
             audioRecorder.record()
 
@@ -88,9 +88,9 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
 
     
-    @IBAction func stopAudio(sender: AnyObject) {
+    @IBAction func stopAudio(_ sender: AnyObject) {
         
-        recordingInProgress.hidden = true
+        recordingInProgress.isHidden = true
         // stop recording the users voice
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
@@ -100,7 +100,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         }
     }
     
-    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
+    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         
         if(flag){
             
@@ -110,18 +110,18 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             recordedAudio.title = recorder.url.lastPathComponent
             
             // move to next scene aka perform segue
-            self.performSegueWithIdentifier("stopRecording", sender: recordedAudio)
+            self.performSegue(withIdentifier: "stopRecording", sender: recordedAudio)
             
         }else{
             print("Recording was not successfull", terminator: "")
-            recordButton.enabled = true
-            stopButton.hidden = true
+            recordButton.isEnabled = true
+            stopButton.isHidden = true
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "stopRecording"){
-            let playSoundsVC:PlaySoundsViewController = segue.destinationViewController as! PlaySoundsViewController
+            let playSoundsVC:PlaySoundsViewController = segue.destination as! PlaySoundsViewController
             let data = sender as! RecordedAudio
             playSoundsVC.receivedAudio = data
             
