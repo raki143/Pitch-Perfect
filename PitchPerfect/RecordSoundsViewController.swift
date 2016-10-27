@@ -30,11 +30,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     @IBAction func RecordAudioButtonPressed(sender: AnyObject)
     {
-        print("Record Button is pressed.")
-        recordingLabel.text = "Recording in progress"
-        stopRecordingButton.enabled = true
-        recordButton.enabled = false
-        
+        configureRecrodingButtons(true)
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory,.UserDomainMask, true)[0] as String
         let recordingName = "recordedVoice.wav"
         let pathArray = [dirPath, recordingName]
@@ -50,15 +46,18 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     @IBAction func stopRecordingButtonPressed(sender: AnyObject)
     {
-        print("Recording has been stopped.")
-        recordingLabel.text = "Tap to Record"
-        recordButton.enabled = true
-        stopRecordingButton.enabled = false
+
+        configureRecrodingButtons(false)
         audioRecorder.stop()
         print(audioRecorder.currentTime)
         try! audioSession.setActive(false)
     }
     
+    func configureRecrodingButtons(isRecording: Bool){
+        recordingLabel.text = isRecording ? "Recording in progress" : "Tap to record"
+        recordButton.enabled = isRecording ? false: true
+        stopRecordingButton.enabled = isRecording ? true : false
+    }
     
     // MARK: - Perform Segue
     
@@ -66,7 +65,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     {
         print("AVAudioRecorder Finished Recording ")
         if (flag) {
-            self.performSegueWithIdentifier("stopRecording", sender: audioRecorder.url)
+            performSegueWithIdentifier("stopRecording", sender: audioRecorder.url)
         }else{
             print("Recorded audio saving is failed")
         }
